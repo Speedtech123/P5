@@ -1,0 +1,17 @@
+import pandas as pd 
+data = {'name': ['Alice', 'Bob', 'Charles', 'David', 'Eric'], 
+'year': [2017, 2017, 2017, 2017, 2017], 
+'salary': [40000, 24000, 31000, 20000, 30000]} 
+data1 = pd.DataFrame({'Name': ['Billy', 'Brian', 'Bran', 'Bryce', 'Betty'], 
+'subject_id':['sub2','sub4','sub3','sub6','sub5'], 
+'Marks_scored':[89,80,79,97,88]}) 
+df = pd.DataFrame(data, index = ['Acme', 'Acme', 'Bilbao', 'Bilbao', 'Bilbao']) 
+print(df) 
+print("*************************************************************")
+# filtering option
+df_filtered = df.query('salary>30000') 
+print(df_filtered) 
+print("*************************************************************")
+
+df_filtered1 = df[(df.salary >= 30000) & (df.year == 2017)] 
+print(df_filtered1) 7u
